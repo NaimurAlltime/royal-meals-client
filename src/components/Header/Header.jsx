@@ -12,20 +12,26 @@ const Header = () => {
       variant="light"
     >
       <Container>
-        <Navbar.Brand className="fs-3 fw-semibold" href="#home">
+        <Navbar.Brand
+          style={{ color: "#a82d49" }}
+          className="fs-3 fw-semibold"
+          href="#home"
+        >
           Royal Meals
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
             <Link
-              className="me-4 text-decoration-none text-dark fs-5 fw-medium"
+              style={{ color: "#a82d49" }}
+              className="me-4 text-decoration-none fs-5 fw-medium"
               to="/"
             >
               Home
             </Link>
             <Link
-              className="text-decoration-none fs-5 text-dark fw-medium"
+              style={{ color: "#a82d49" }}
+              className="text-decoration-none fs-5 fw-medium"
               to="/blog"
             >
               Blog
@@ -34,7 +40,10 @@ const Header = () => {
           <Nav>
             <Nav.Link>Profile</Nav.Link>
             <Link to="/login">
-              <Button className="px-3" variant="dark">
+              <Button
+                className="border-0 px-4"
+                style={{ background: "#a82d49" }}
+              >
                 Login
               </Button>
             </Link>
