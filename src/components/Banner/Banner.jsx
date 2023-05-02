@@ -21,9 +21,7 @@ const Banner = () => {
           <Button className="border-0 me-3" style={{ background: "#a82d49" }}>
             Order Now <FaShoppingBasket />
           </Button>
-          <Button cl variant="outline-danger">
-            Learn More
-          </Button>
+          <Button variant="outline-danger">Learn More</Button>
         </div>
       </div>
       <div className="col-lg-8 col-md-8">
