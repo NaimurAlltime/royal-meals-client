@@ -6,6 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import Blog from "./components/Blog/Blog";
 import ChefRecipes from "./components/ChefRecipes/ChefRecipes";
 import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 import "./index.css";
 import Main from "./layouts/Main";
 
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
         element: <ChefRecipes></ChefRecipes>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/chef/${params.id}`),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },
