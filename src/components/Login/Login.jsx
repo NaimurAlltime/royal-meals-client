@@ -9,7 +9,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  const { SignInUser } = useContext(AuthContext);
+  const { SignInUser, googleSignIn, githubSignIn } = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -30,6 +30,36 @@ const Login = () => {
         setError("");
         form.reset();
         setSuccess("User Login Successful!");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
+  };
+
+  //   google sign in
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        setError("");
+        setSuccess("Google Sign In Successful!");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
+  };
+
+  //   github sign in
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        setError("");
+        setSuccess("Github Sign In Successful!");
       })
       .catch((error) => {
         console.log(error.message);
@@ -79,10 +109,13 @@ const Login = () => {
         <Form.Text className="text-danger">{error}</Form.Text>
       </Form>
       <hr />
-      <Button variant="outline-secondary w-100 mt-2">
+      <Button
+        onClick={handleGoogleSignIn}
+        variant="outline-secondary w-100 mt-2"
+      >
         <FcGoogle /> Sign-in With Google
       </Button>
-      <Button variant="outline-success w-100 mt-3">
+      <Button onClick={handleGithubSignIn} variant="outline-success w-100 mt-3">
         <FaGithub className="ms-1" /> Sign-in With Github
       </Button>
     </Container>
