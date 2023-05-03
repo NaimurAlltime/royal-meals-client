@@ -1,11 +1,18 @@
 import { Rating } from "@smastrom/react-rating";
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Col } from "react-bootstrap";
+import { toast, ToastContainer } from "react-toastify";
 
 import "@smastrom/react-rating/style.css";
 
 const Recipe = ({ recipe }) => {
-  console.log(recipe);
+  const [click, setClick] = useState(true);
+  // console.log(recipe);
+  const handleButton = (event) => {
+    toast("the recipe is your favorite!");
+    setClick(event.target.checked);
+  };
+
   const { name, ingredients, method, rating, img_url } = recipe;
   return (
     <Col>
@@ -28,10 +35,13 @@ const Recipe = ({ recipe }) => {
           <div className="text-center">
             <Button
               className="border-0 w-100 fw-semibold fs-5"
+              onClick={handleButton}
+              disabled={!click}
               style={{ background: "#a82d49" }}
             >
               Favorite
             </Button>
+            <ToastContainer />
           </div>
         </Card.Body>
       </Card>
