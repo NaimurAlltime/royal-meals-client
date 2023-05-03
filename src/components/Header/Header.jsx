@@ -12,12 +12,14 @@ const Header = () => {
       variant="light"
     >
       <Container>
-        <Navbar.Brand
-          style={{ color: "#a82d49" }}
-          className="fs-3 fw-semibold"
-          href="#home"
-        >
-          Royal Meals
+        <Navbar.Brand>
+          <Link
+            style={{ color: "#a82d49" }}
+            className="fs-3 text-decoration-none fw-semibold"
+            to="/"
+          >
+            Royal Meals
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
