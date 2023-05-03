@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD2wZM5ntJcCEfIf15Aj5oFRTFmad66iKI",
-  authDomain: "royal-meals.firebaseapp.com",
-  projectId: "royal-meals",
-  storageBucket: "royal-meals.appspot.com",
-  messagingSenderId: "669825346871",
-  appId: "1:669825346871:web:4a60bc22f81b3854d97eb2"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
