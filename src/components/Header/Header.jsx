@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../Provider/AuthProvider";
+import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -22,32 +23,29 @@ const Header = () => {
       variant="light"
     >
       <Container>
-        <Navbar.Brand>
-          <Link
-            style={{ color: "#a82d49" }}
-            className="fs-3 text-decoration-none fw-semibold"
-            to="/"
-          >
-            Royal Meals
-          </Link>
+        <Navbar.Brand
+          style={{ color: "#a82d49" }}
+          className="fs-3 text-decoration-none fw-semibold"
+        >
+          Royal Meals
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-            <Link
+            <NavLink
               style={{ color: "#a82d49" }}
               className="me-4 text-decoration-none fs-5 fw-medium"
               to="/"
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               style={{ color: "#a82d49" }}
-              className="text-decoration-none fs-5 fw-medium"
+              className="me-4 text-decoration-none fs-5 fw-medium"
               to="/blog"
             >
               Blog
-            </Link>
+            </NavLink>
           </Nav>
           <Nav>
             {user ? (
@@ -69,14 +67,14 @@ const Header = () => {
                 </Button>
               </>
             ) : (
-              <Link to="/login">
+              <NavLink to="/login">
                 <Button
                   className="border-0 px-4"
                   style={{ background: "#a82d49" }}
                 >
                   Login
                 </Button>
-              </Link>
+              </NavLink>
             )}
           </Nav>
         </Navbar.Collapse>
