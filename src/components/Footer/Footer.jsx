@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer
       style={{ backgroundColor: "#a82d49" }}
-      className="text-center text-white py-5 mt-4"
+      className="text-center text-white py-5 mt-5"
     >
       <div className="text-center">
         <Link
