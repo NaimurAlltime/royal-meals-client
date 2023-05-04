@@ -24,7 +24,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/chefs"),
+        loader: () =>
+          fetch("https://royal-meals-server-naimuralltime.vercel.app/chefs"),
       },
       {
         path: "/blog",
@@ -38,7 +39,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chef/${params.id}`),
+          fetch(
+            `https://royal-meals-server-naimuralltime.vercel.app/chef/${params.id}`
+          ),
       },
       {
         path: "/login",

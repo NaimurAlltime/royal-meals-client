@@ -1,6 +1,6 @@
 # Royal Meals Client
 
-## Live Site:
+## Live Site: https://royal-meals.web.app/
 
 ### My project name Royal Meals. Simple description in my project:
 
