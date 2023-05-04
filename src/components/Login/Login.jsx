@@ -2,12 +2,13 @@ import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
 
   const { SignInUser, googleSignIn, githubSignIn } = useContext(AuthContext);
 
@@ -30,6 +31,7 @@ const Login = () => {
         setError("");
         form.reset();
         setSuccess("User Login Successful!");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);

@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import "react-tooltip/dist/react-tooltip.css";
 import Blog from "./components/Blog/Blog";
 import ChefRecipes from "./components/ChefRecipes/ChefRecipes";
 import Home from "./components/Home/Home";

@@ -9,7 +9,7 @@ const Recipe = ({ recipe }) => {
   const [click, setClick] = useState(true);
   // console.log(recipe);
   const handleButton = (event) => {
-    toast("the recipe is your favorite!");
+    toast("This recipe is my favorite!");
     setClick(event.target.checked);
   };
 
