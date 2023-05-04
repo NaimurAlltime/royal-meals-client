@@ -1,15 +1,23 @@
 import React from "react";
 import { Row } from "react-bootstrap";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 import Chef from "../Chef/Chef";
 
 const Chefs = () => {
   const chefs = useLoaderData();
   // console.log(chefs);
-  // const navigate = useNavigate();
+  const navigate = useNavigation();
+  // console.log(navigate);
 
-  // const { loading } = useContext(AuthContext);
-  // if (navigate === "loading") {
+  if (navigate.state === "loading") {
+    return (
+      <div className="text-center text-danger">
+        <ClipLoader color="#FF0000" />
+      </div>
+    );
+  }
+
   return (
     <div className="mt-5">
       <h2 style={{ color: "#43121d" }} className="fs-2 fw-semiBold text-center">
@@ -22,7 +30,6 @@ const Chefs = () => {
       </Row>
     </div>
   );
-  // }
 };
 
 export default Chefs;
