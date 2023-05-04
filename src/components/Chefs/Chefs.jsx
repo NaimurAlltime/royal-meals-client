@@ -6,6 +6,10 @@ import Chef from "../Chef/Chef";
 const Chefs = () => {
   const chefs = useLoaderData();
   // console.log(chefs);
+  // const navigate = useNavigate();
+
+  // const { loading } = useContext(AuthContext);
+  // if (navigate === "loading") {
   return (
     <div className="mt-5">
       <h2 style={{ color: "#43121d" }} className="fs-2 fw-semiBold text-center">
@@ -18,6 +22,7 @@ const Chefs = () => {
       </Row>
     </div>
   );
+  // }
 };
 
 export default Chefs;

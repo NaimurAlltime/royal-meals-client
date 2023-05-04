@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
 import { FcLike } from "react-icons/fc";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 const Chef = ({ chef }) => {
@@ -9,7 +10,9 @@ const Chef = ({ chef }) => {
   return (
     <Col>
       <Card>
-        <Card.Img variant="top" style={{ height: "400px" }} src={img_url} />
+        <LazyLoad>
+          <Card.Img variant="top" style={{ height: "400px" }} src={img_url} />
+        </LazyLoad>
         <Card.Body>
           <Card.Title className="fw-semibold fs-4 mb-4"> {name} </Card.Title>
           <p className="fw-semibold mb-2">

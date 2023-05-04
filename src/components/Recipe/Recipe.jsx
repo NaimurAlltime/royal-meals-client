@@ -1,6 +1,7 @@
 import { Rating } from "@smastrom/react-rating";
 import React, { useState } from "react";
 import { Button, Card, Col } from "react-bootstrap";
+import LazyLoad from "react-lazy-load";
 import { toast, ToastContainer } from "react-toastify";
 
 import "@smastrom/react-rating/style.css";
@@ -17,7 +18,9 @@ const Recipe = ({ recipe }) => {
   return (
     <Col>
       <Card style={{ height: "600px" }}>
-        <Card.Img variant="top" style={{ height: "200px" }} src={img_url} />
+        <LazyLoad>
+          <Card.Img variant="top" style={{ height: "200px" }} src={img_url} />
+        </LazyLoad>
         <Card.Body>
           <Card.Title className="fw-semibold fs-4 mb-3"> {name} </Card.Title>
           <p>
