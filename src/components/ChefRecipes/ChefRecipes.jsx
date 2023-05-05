@@ -9,9 +9,9 @@ const ChefRecipes = () => {
   const chef = useLoaderData();
   const { name, img_url, num_recipes, experience_years, likes, bio, recipes } =
     chef;
-  console.log(chef);
+  // console.log(chef);
   return (
-    <Container>
+    <Container className="mt-4">
       <Col>
         <Card>
           <LazyLoad>

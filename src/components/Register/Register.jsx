@@ -59,6 +59,7 @@ const Register = () => {
         console.log(loggedUser);
         setError("");
         setSuccess("Google Sign In Successful!");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -74,6 +75,7 @@ const Register = () => {
         console.log(loggedUser);
         setError("");
         setSuccess("Github Sign In Successful!");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);

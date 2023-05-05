@@ -17,7 +17,7 @@ const Recipe = ({ recipe }) => {
   const { name, ingredients, method, rating, img_url } = recipe;
   return (
     <Col>
-      <Card style={{ height: "600px" }}>
+      <Card className="h-100">
         <LazyLoad>
           <Card.Img variant="top" style={{ height: "200px" }} src={img_url} />
         </LazyLoad>
@@ -28,16 +28,16 @@ const Recipe = ({ recipe }) => {
             <br /> {ingredients}
           </p>
           <p>
-            <span className="fw-semibold mb-2 fs-5">Cooking Method:</span>
+            <span className="fw-semibold mb-1 fs-5">Cooking Method:</span>
             <br /> {method}
           </p>
-          <div className="d-flex mb-3">
+          <div className="d-flex mb-4">
             <Rating style={{ maxWidth: 150 }} value={rating} readOnly />
             <span className="fw-semibold fs-5 ms-2">{rating}</span>
           </div>
-          <div className="text-center">
+          <div className="text-center pt-4">
             <Button
-              className="border-0 w-100 fw-semibold fs-5"
+              className="border-0 position-absolute bottom-0 my-2 end-0 w-100 fw-semibold fs-5"
               onClick={handleButton}
               disabled={!click}
               style={{ background: "#a82d49" }}
