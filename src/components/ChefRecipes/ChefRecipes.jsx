@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { FcLike } from "react-icons/fc";
-import LazyLoad from "react-lazy-load";
+// import LazyLoad from "react-lazy-load";
 import { useLoaderData } from "react-router-dom";
 import Recipe from "../Recipe/Recipe";
 
@@ -14,9 +14,9 @@ const ChefRecipes = () => {
     <Container className="mt-4">
       <Col>
         <Card>
-          <LazyLoad>
-            <Card.Img variant="top" style={{ height: "540px" }} src={img_url} />
-          </LazyLoad>
+          {/* <LazyLoad> */}
+          <Card.Img variant="top" style={{ height: "540px" }} src={img_url} />
+          {/* </LazyLoad> */}
           <Card.Body>
             <Card.Title className="fw-semibold fs-4 mb-4"> {name} </Card.Title>
             <div className="d-flex justify-content-between">
