@@ -17,7 +17,7 @@ const Recipe = ({ recipe }) => {
   const { name, ingredients, method, rating, img_url } = recipe;
   return (
     <Col>
-      <Card className="h-100">
+      <Card className="h-100" style={{ width: "384px" }}>
         <LazyLoad>
           <Card.Img variant="top" style={{ height: "200px" }} src={img_url} />
         </LazyLoad>
