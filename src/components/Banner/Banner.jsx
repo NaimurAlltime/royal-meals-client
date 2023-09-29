@@ -4,7 +4,7 @@ import { FaShoppingBasket } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <div className="row justify-content-between align-items-center">
+    <div className="row justify-content-between align-items-center px-1 ps-4">
       <div className="col-lg-4 col-md-4">
         <h2 style={{ color: "#43121d" }} className="fs-1 fw-bold">
           Good food choices
