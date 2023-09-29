@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Button, Nav, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../Provider/AuthProvider";
 import "./Header.css";
@@ -67,14 +67,14 @@ const Header = () => {
               </Button>
             </>
           ) : (
-            <NavLink to="/login">
+            <Link to="/login">
               <Button
                 className="border-0 px-4"
                 style={{ background: "#a82d49" }}
               >
                 Login
               </Button>
-            </NavLink>
+            </Link>
           )}
         </Nav>
       </Navbar.Collapse>
